@@ -38,21 +38,25 @@ public interface BinanceApiAsyncRestClient {
 
   /**
    * Test connectivity to the Rest API.
+   * @param callback a callback
    */
   void ping(BinanceApiCallback<Void> callback);
 
   /**
    * Check server time.
+   * @param callback callback
    */
   void getServerTime(BinanceApiCallback<ServerTime> callback);
 
   /**
    * Current exchange trading rules and symbol information
+   * @param callback callback
    */
   void getExchangeInfo(BinanceApiCallback<ExchangeInfo> callback);
 
   /**
    * ALL supported assets and whether or not they can be withdrawn.
+   * @param callback callback
    */
   void getAllAssets(BinanceApiCallback<List<Asset>> callback);
 
@@ -99,13 +103,14 @@ public interface BinanceApiAsyncRestClient {
    * @param startTime Timestamp in ms to get aggregate trades from INCLUSIVE (optional).
    * @param endTime Timestamp in ms to get aggregate trades until INCLUSIVE (optional).
    * @param callback the callback that handles the response
-   * @return a list of aggregate trades for the given symbol
    */
   void getAggTrades(String symbol, String fromId, Integer limit, Long startTime, Long endTime, BinanceApiCallback<List<AggTrade>> callback);
 
   /**
    * Return the most recent aggregate trades for <code>symbol</code>
    *
+   * @param symbol symbol
+   * @param callback callback
    * @see #getAggTrades(String, String, Integer, Long, Long, BinanceApiCallback)
    */
   void getAggTrades(String symbol, BinanceApiCallback<List<AggTrade>> callback);

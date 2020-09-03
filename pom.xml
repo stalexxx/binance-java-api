@@ -4,6 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <name>Binance Java API</name>
+  <description>Java implementation for Binance API</description>
+  <url>https://github.com/Serg-Maximchuk/binance-java-api</url>
+
   <groupId>io.github.serg-maximchuk</groupId>
   <artifactId>binance-api-client</artifactId>
   <version>1.0.1</version>
@@ -67,25 +71,25 @@
               </execution>
             </executions>
           </plugin>
-
           <!-- Javadoc plugin -->
-<!--          <plugin>-->
-<!--            <groupId>org.apache.maven.plugins</groupId>-->
-<!--            <artifactId>maven-javadoc-plugin</artifactId>-->
-<!--            <version>2.10.4</version>-->
-<!--            <configuration>-->
-<!--              <detectJavaApiLink>false</detectJavaApiLink>-->
-<!--              <source>8</source>-->
-<!--            </configuration>-->
-<!--            <executions>-->
-<!--              <execution>-->
-<!--                <id>attach-javadocs</id>-->
-<!--                <goals>-->
-<!--                  <goal>jar</goal>-->
-<!--                </goals>-->
-<!--              </execution>-->
-<!--            </executions>-->
-<!--          </plugin>-->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>2.10.4</version>
+            <configuration>
+              <additionalparam>-Xdoclint:none</additionalparam>
+              <detectJavaApiLink>false</detectJavaApiLink>
+              <source>8</source>
+            </configuration>
+            <executions>
+              <execution>
+                <id>attach-javadocs</id>
+                <goals>
+                  <goal>jar</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
           <!-- GPG plugin -->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -166,5 +170,13 @@
     </repository>
   </distributionManagement>
 
+  <developers>
+    <developer>
+      <name>Serhii Maksymchuk</name>
+      <email>serg.maximchuk@gmail.com</email>
+      <organization>cross-rates</organization>
+      <organizationUrl>https://github.com/cross-rates</organizationUrl>
+    </developer>
+  </developers>
 
 </project>
