@@ -121,6 +121,16 @@ public interface BinanceApiRestClient {
   /**
    * Kline/candlestick bars for a symbol. Klines are uniquely identified by their open time.
    *
+   * @param symbol symbol to aggregate (mandatory)
+   * @param interval candlestick interval (mandatory)
+   * @param limit Default 500; max 1000 (optional)
+   * @return a candlestick bar for the given symbol and interval
+   */
+  List<Candlestick> getCandlestickBars(String symbol, CandlestickInterval interval, Integer limit);
+
+  /**
+   * Kline/candlestick bars for a symbol. Klines are uniquely identified by their open time.
+   *
    * @see #getCandlestickBars(String, CandlestickInterval, Integer, Long, Long)
    */
   List<Candlestick> getCandlestickBars(String symbol, CandlestickInterval interval);

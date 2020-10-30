@@ -102,6 +102,11 @@ public class BinanceApiAsyncRestClientImpl implements BinanceApiAsyncRestClient 
   }
 
   @Override
+  public void getCandlestickBars(String symbol, CandlestickInterval interval, Integer limit, BinanceApiCallback<List<Candlestick>> callback) {
+    getCandlestickBars(symbol, interval, limit, null, null, callback);
+  }
+
+  @Override
   public void getCandlestickBars(String symbol, CandlestickInterval interval, BinanceApiCallback<List<Candlestick>> callback) {
     getCandlestickBars(symbol, interval, null, null, null, callback);
   }
@@ -122,7 +127,7 @@ public class BinanceApiAsyncRestClientImpl implements BinanceApiAsyncRestClient 
   }
 
   @Override
-  public void getPrice(String symbol , BinanceApiCallback<TickerPrice> callback) {
+  public void getPrice(String symbol, BinanceApiCallback<TickerPrice> callback) {
     binanceApiService.getLatestPrice(symbol).enqueue(new BinanceApiCallbackAdapter<>(callback));
   }
 
