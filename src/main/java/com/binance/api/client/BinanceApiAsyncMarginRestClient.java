@@ -39,7 +39,6 @@ public interface BinanceApiAsyncMarginRestClient {
    * Send in a new margin order (async).
    *
    * @param order the new order to submit.
-   * @return a response containing details about the newly placed order.
    */
   void newOrder(MarginNewOrder order, BinanceApiCallback<MarginNewOrderResponse> callback);
 
@@ -54,7 +53,6 @@ public interface BinanceApiAsyncMarginRestClient {
    * Check margin order's status (async).
    *
    * @param orderStatusRequest order status request options/filters
-   * @return an order
    */
   void getOrderStatus(OrderStatusRequest orderStatusRequest, BinanceApiCallback<Order> callback);
 
@@ -62,7 +60,6 @@ public interface BinanceApiAsyncMarginRestClient {
    * Get margin trades for a specific symbol (async).
    *
    * @param symbol symbol to get trades from
-   * @return a list of trades
    */
   void getMyTrades(String symbol, BinanceApiCallback<List<Trade>> callback);
 
@@ -70,8 +67,6 @@ public interface BinanceApiAsyncMarginRestClient {
 
   /**
    * Start a new user data stream (async).
-   *
-   * @return a listen key that can be used with data streams
    */
   void startUserDataStream(BinanceApiCallback<ListenKey> callback);
 
@@ -86,7 +81,6 @@ public interface BinanceApiAsyncMarginRestClient {
    * Execute transfer between spot account and margin account
    * @param asset asset to repay
    * @param amount amount to repay
-   * @return transaction id
    */
   void transfer(String asset, String amount, TransferType type, BinanceApiCallback<MarginTransaction> callback);
 
@@ -94,7 +88,6 @@ public interface BinanceApiAsyncMarginRestClient {
    * Apply for a loan
    * @param asset asset to repay
    * @param amount amount to repay
-   * @return transaction id
    */
   void borrow(String asset, String amount, BinanceApiCallback<MarginTransaction> callback);
 
@@ -102,7 +95,6 @@ public interface BinanceApiAsyncMarginRestClient {
    * Repay loan for margin account
    * @param asset asset to repay
    * @param amount amount to repay
-   * @return transaction id
    */
   void repay(String asset, String amount, BinanceApiCallback<MarginTransaction> callback);
 
