@@ -86,6 +86,7 @@ public class UserDataUpdateEvent {
   }
 
   public enum UserDataUpdateEventType {
+    ACCOUNT_UPDATE("outboundAccountInfo"),
     ACCOUNT_POSITION_UPDATE("outboundAccountPosition"),
     BALANCE_UPDATE("balanceUpdate"),
     ORDER_TRADE_UPDATE("executionReport"),
