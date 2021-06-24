@@ -10,7 +10,7 @@
 
   <groupId>io.github.serg-maximchuk</groupId>
   <artifactId>binance-api-client</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <licenses>
     <license>
       <name>The MIT License</name>
@@ -41,17 +41,17 @@
     <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
-      <version>1.10</version>
+      <version>1.15</version>
     </dependency>
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>3.6</version>
+      <version>3.12.0</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -131,13 +131,6 @@
         <configuration>
           <source>11</source>
           <target>11</target>
-          <annotationProcessorPaths>
-            <path>
-              <groupId>org.projectlombok</groupId>
-              <artifactId>lombok</artifactId>
-              <version>1.18.12</version>
-            </path>
-          </annotationProcessorPaths>
         </configuration>
       </plugin>
       <!-- Nexus Staging Plugin -->
