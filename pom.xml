@@ -10,7 +10,7 @@
 
   <groupId>io.github.serg-maximchuk</groupId>
   <artifactId>binance-api-client</artifactId>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <licenses>
     <license>
       <name>The MIT License</name>
@@ -131,13 +131,6 @@
         <configuration>
           <source>11</source>
           <target>11</target>
-          <annotationProcessorPaths>
-            <path>
-              <groupId>org.projectlombok</groupId>
-              <artifactId>lombok</artifactId>
-              <version>1.18.12</version>
-            </path>
-          </annotationProcessorPaths>
         </configuration>
       </plugin>
       <!-- Nexus Staging Plugin -->
