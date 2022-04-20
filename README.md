@@ -13,7 +13,7 @@ binance-java-api is a lightweight Java library for interacting with the [Binance
 <dependency>
   <groupId>com.binance.api</groupId>
   <artifactId>binance-api-client</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
 </dependency>
 ```
 

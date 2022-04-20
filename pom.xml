@@ -10,7 +10,7 @@
 
   <groupId>io.github.serg-maximchuk</groupId>
   <artifactId>binance-api-client</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <licenses>
     <license>
       <name>The MIT License</name>
