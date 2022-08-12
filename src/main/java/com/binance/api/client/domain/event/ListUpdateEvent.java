@@ -49,24 +49,12 @@ public class ListUpdateEvent {
   @JsonProperty("C")
   private String listClientOrderId;
 
-  /**
-   * Buy/Sell order side.
-   */
-  @JsonProperty("S")
-  private OrderSide side;
-
 
   /**
    * Reason why the order was rejected.
    */
   @JsonProperty("r")
   private OrderRejectReason orderRejectReason;
-
-  /**
-   * Order id.
-   */
-  @JsonProperty("i")
-  private Long orderId;
 
 
   /**
@@ -75,26 +63,10 @@ public class ListUpdateEvent {
   @JsonProperty("T")
   private Long transactionTime;
 
-  /**
-   * Trade id.
-   */
-  @JsonProperty("t")
-  private Long tradeId;
 
-  /**
-   * Order creation time.
-   */
   @JsonProperty("O")
-  private Long orderCreationTime;
-
-
   private List<ListItem> listItems;
 
-  /**
-   * Quote Order Qty.
-   */
-  @JsonProperty("Q")
-  private String quoteOrderQty;
 
   public String getOrderListId() {
     return orderListId;
@@ -169,24 +141,6 @@ public class ListUpdateEvent {
   }
 
 
-  public OrderSide getSide() {
-    return side;
-  }
-
-  public void setSide(OrderSide side) {
-    this.side = side;
-  }
-
-
-  public Long getOrderId() {
-    return orderId;
-  }
-
-  public void setOrderId(Long orderId) {
-    this.orderId = orderId;
-  }
-
-
   public Long getTransactionTime() {
     return transactionTime;
   }
@@ -195,21 +149,6 @@ public class ListUpdateEvent {
     this.transactionTime = transactionTime;
   }
 
-  public Long getTradeId() {
-    return tradeId;
-  }
-
-  public void setTradeId(Long tradeId) {
-    this.tradeId = tradeId;
-  }
-
-  public Long getOrderCreationTime() {
-    return orderCreationTime;
-  }
-
-  public void setOrderCreationTime(Long orderCreationTime) {
-    this.orderCreationTime = orderCreationTime;
-  }
 
   public List<ListItem> getListItems() {
     return listItems;
@@ -219,30 +158,21 @@ public class ListUpdateEvent {
     this.listItems = listItems;
   }
 
-  public String getQuoteOrderQty() {
-    return quoteOrderQty;
-  }
-
-  public void setQuoteOrderQty(String quoteOrderQty) {
-    this.quoteOrderQty = quoteOrderQty;
-  }
 
   @Override
   public String toString() {
-    return new ToStringBuilder(this, BinanceApiConstants.TO_STRING_BUILDER_STYLE)
-        .append("eventType", eventType)
-        .append("eventTime", eventTime)
-        .append("symbol", symbol)
-        .append("orderListId", orderListId)
-        .append("side", side)
-        .append("orderRejectReason", orderRejectReason)
-        .append("orderId", orderId)
-        .append("orderTradeTime", transactionTime)
-        .append("tradeId", tradeId)
-        .append("orderCreationTime", orderCreationTime)
-        .append("quoteOrderQty", quoteOrderQty)
-        .toString();
+    return "ListUpdateEvent{" +
+        "eventType='" + eventType + '\'' +
+        ", eventTime=" + eventTime +
+        ", symbol='" + symbol + '\'' +
+        ", orderListId='" + orderListId + '\'' +
+        ", contingencyType=" + contingencyType +
+        ", listStatus=" + listStatus +
+        ", listOrderStatus=" + listOrderStatus +
+        ", listClientOrderId='" + listClientOrderId + '\'' +
+        ", orderRejectReason=" + orderRejectReason +
+        ", transactionTime=" + transactionTime +
+        ", listItems=" + listItems +
+        '}';
   }
-
-
 }
